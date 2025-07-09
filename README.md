@@ -2,9 +2,9 @@
 
 Submitted by: **Joshua Mburu**
 
-**Trivia App** is an iOS app that fetches and displays live trivia questions from the Open Trivia Database API. Users can answer multiple-choice questions and receive a final score at the end of the game. The app demonstrates working with APIs, decoding JSON, and updating UI dynamically based on network responses.
+**Trivia App** is an iOS app that fetches and displays live trivia questions from the Open Trivia Database API. Users can answer multiple-choice questions and receive a final score at the end of the game.
 
-Time spent: **5–6 hours** spent in total
+Time spent: **5–6 hours** 
 
 ---
 
