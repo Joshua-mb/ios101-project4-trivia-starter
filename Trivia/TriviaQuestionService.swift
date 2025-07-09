@@ -8,26 +8,23 @@
 import Foundation
 class TriviaQuestionService {
   static func fetchQuestions(completion: @escaping ([TriviaQuestion]) -> Void) {
-    // You can change amount, type, difficulty, or category here
     let urlString = "https://opentdb.com/api.php?amount=5&type=multiple"
     guard let url = URL(string: urlString) else {
-      print("❌ Invalid URL")
+      print("error")
       return
     }
 
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
-      // Handle basic errors
       if let error = error {
-        print("❌ Network error:", error.localizedDescription)
+        print("error")
         return
       }
 
       guard let data = data else {
-        print("❌ No data returned")
+        print("Error")
         return
       }
 
-      // Try decoding the response into your models
       do {
         let decoder = JSONDecoder()
         let response = try decoder.decode(TriviaResponse.self, from: data)
@@ -35,7 +32,7 @@ class TriviaQuestionService {
           completion(response.results)
         }
       } catch {
-        print("❌ Decoding error:", error.localizedDescription)
+        print("error")
       }
     }
 
