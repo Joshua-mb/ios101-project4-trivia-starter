@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct TriviaResponse: Decodable {
+  let results: [TriviaQuestion]
+}
